@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Horizon – Event Management</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">◈</span>
+        <h1>Event Horizon</h1>
+      </div>
+      <p class="tagline">Your gateway to upcoming experiences</p>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- ADD EVENT FORM -->
+    <section class="form-section">
+      <h2 class="section-title">Add New Event</h2>
+      <div id="form-warning" class="warning-box hidden">
+        ⚠ Please fill in all fields before adding an event.
+      </div>
+      <div class="event-form">
+        <div class="form-group">
+          <label for="event-name">Event Name</label>
+          <input type="text" id="event-name" placeholder="e.g. Tech Summit 2025" />
+        </div>
+        <div class="form-group">
+          <label for="event-date">Event Date</label>
+          <input type="date" id="event-date" />
+        </div>
+        <div class="form-group full-width">
+          <label for="event-desc">Event Description</label>
+          <textarea id="event-desc" rows="3" placeholder="Describe the event briefly..."></textarea>
+        </div>
+        <div class="form-group full-width">
+          <button id="add-btn" class="btn btn-primary">+ Add Event</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEARCH BAR -->
+    <section class="search-section">
+      <div class="search-bar">
+        <span class="search-icon">⌕</span>
+        <input type="text" id="search-input" placeholder="Search events by name or date..." />
+      </div>
+    </section>
+
+    <!-- EVENTS LIST -->
+    <section class="events-section">
+      <div class="events-header">
+        <h2 class="section-title">Upcoming &amp; Past Events</h2>
+        <div class="legend">
+          <span class="legend-dot upcoming"></span> Upcoming
+          <span class="legend-dot past"></span> Past
+        </div>
+      </div>
+      <div id="events-container" class="events-grid">
+        <!-- Events rendered by JS -->
+      </div>
+      <p id="no-results" class="no-results hidden">No events match your search.</p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>Designed &amp; developed by <strong>Umair</strong> &nbsp;|&nbsp; &copy; <span id="year"></span> Event Horizon</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
